@@ -1,0 +1,274 @@
+.all {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .draw_board {
+    flex: 1;
+    border-radius:4px 4px 4px 4px;
+    margin-right: 0px;
+  }
+
+  #mycanvas {
+    flex: 1;
+    border-radius:4px 4px 4px 4px;
+  }
+  
+  .tool_board {
+    width: 200px;
+    flex: 0;
+    background-color: bisque;
+    border-radius:4px 4px 4px 4px;
+}
+
+  .title {
+    font-family: "Papyrus";
+    font-weight: bold;
+  }
+
+  .text-style {
+    float: left;
+    position: absolute;
+    font: 28px orbitron;
+    word-break: break-all;
+    background-color: transparent;
+    resize: none;
+    z-index: 1;
+    border: none;
+}
+
+.canvas-style {
+  background-color: azure;
+  float: left;
+  position: absolute;
+  z-index: 5;
+  border-radius:4px 4px 4px 4px;
+}
+
+.cor {
+  font-family: "Papyrus";
+  font-weight: bold;
+}
+
+input[type="range"] {
+  width: 130px;
+  height: 7px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+  outline: none;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: rgb(171, 129, 71);
+  width: var(--thumb-size, 15px);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#red::-webkit-slider-thumb{
+  background: rgb(224, 110, 110);
+}
+#green::-webkit-slider-thumb{
+  background: rgb(109, 189, 124);
+}
+#blue::-webkit-slider-thumb{
+  background: rgb(120, 164, 227);
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 7px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+#fontface.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+#fontface {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+  width: 100px;
+  height: 35px;
+}
+
+/*style items (options):*/
+#fontface {
+  background-color: rgb(171, 129, 71);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  border-radius:5px 5px 5px 5px;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+#fontsize.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+#fontsize {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+  width: 90px;
+  height: 35px;
+  border-radius:5px 5px 5px 5px;
+} 
+
+/*style items (options):*/
+#fontsize {
+  background-color: rgb(171, 129, 71);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+  
+.btn_g1 .button {
+  background-color: rgb(192, 155, 103); /* Green */
+  border: 1px solid rgb(164, 133, 89);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  float: left;
+  border-radius:5px 5px 5px 5px;
+}
+
+.btn_g1 .button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+.btn_g1 .button:hover {
+  background-color: rgb(150, 114, 63)
+}
+
+.btn_g2 .button {
+  background-color: rgb(192, 155, 103); /* Green */
+  border: 1px solid rgb(164, 133, 89);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  float: left;
+  border-radius:5px 5px 5px 5px;
+}
+.btn_g2 .button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+.btn_g2 .button:hover {
+  background-color: rgb(150, 114, 63)
+}
+
+.btn_g3 .button {
+  background-color: rgb(192, 155, 103); /* Green */
+  border: 1px solid rgb(164, 133, 89);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  float: left;
+  border-radius:5px 5px 5px 5px;
+}
+.btn_g3 .button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+.btn_g3 .button:hover {
+  background-color: rgb(150, 114, 63)
+}
+
+#uploader {
+  font-size: small;
+  size: 7px 10px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+#cor_lable {
+  border: 1px solid rgb(164, 133, 89);
+  padding: 1px 4px 1px 4px;
+  display: block;
+  position: relative;
+  margin: 1px;
+  cursor: pointer;
+}
+
+#cor_lable:before {
+  background-color: rgb(164, 133, 89);
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  border: 1px solid grey;
+  position: absolute;
+  top: -5px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 28px;
+  transition-duration: 0.4s;
+  transform: scale(0);
+}
+
+#cor_lable img {
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+  z-index: -1;
+}
+
+:checked + #cor_lable {
+  border-color: rgb(164, 133, 89);
+}
+
+:checked + #cor_lable:before {
+  content: "✓";
+  background-color: grey;
+  transform: scale(0.5);
+  z-index: 1;
+}
+
+:checked + #cor_lable img {
+  transform: scale(0.9);
+  /* box-shadow: 0 0 5px #333; */
+  z-index: -1;
+}

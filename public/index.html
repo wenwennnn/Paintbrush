@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>hw1_canvas</title>
+
+		<!-- CSS and javascript -->
+		<link rel="stylesheet" type="text/css" href="hw1.css">
+    </head>
+
+    <body style="background-color: antiquewhite; " >
+        <div class="all">
+            <section class="draw_board" id="draw_board">
+                <canvas id="myCanvas" width="1000" height="520" class="canvas-style">
+                </canvas>
+                <textarea name="textBox" id="textBox" cols="5" rows="1" class="text-style"></textarea>
+            </section>
+            <section class="tool_board">
+                &nbsp;&nbsp;
+                <lable class="title">TOOLS</lable><br><br>
+
+                    <div class="btn_g1">
+                        <button id="un_do" class="button"><img src="icon/left.png" height ="30px" width="30px" /></button>
+                        <button id="refresh" class="button"><img src="icon/refresh.webp" height ="30px" width="30px" /></button>
+                        <button id="re_do" class="button"><img src="icon/right.png" height ="30px" width="30px" /></button>
+                        &nbsp;&nbsp;
+                        <br><br>&nbsp;&nbsp;
+                    </div>
+
+                    <div class="btn_g2">
+                        <button id="brush" class="button"><img src="icon/pen_btn.png" height ="30px" width="30px" /></button>
+                        <button id="eraser" class="button"><img src="icon/eraser_btn.png" height ="30px" width="30px" /></button>
+                        <button id="text" class="button"><img src="icon/text_btn.png" height ="30px" width="30px" /></button>
+                        <input type="checkbox" id="fill-color">
+                        <label for="fill-color" class="button" height ="30px" width="30px" id="cor_lable"><img src="icon/fill_cor.png!w480_520cc" height ="30px" width="30px" /></label>
+                        <br><br>&nbsp;&nbsp;
+                    </div>
+
+                    <div class="btn_g3">
+                        <button id="triangle" class="button"><img src="icon/tri_btn.png" height ="30px" width="30px" /></button>
+                        &nbsp;&nbsp;
+                        <button id="circle" class="button"><img src="icon/circle_btn.png" height ="30px" width="30px" /></button>
+                        &nbsp;&nbsp;
+                        <button id="rectangle" class="button"><img src="icon/rec_btn.png" height ="30px" width="30px" /></button>
+                        <button id="line" class="button"><img src="icon/line.png" height ="30px" width="30px" /></button>
+                        <br><br>&nbsp;&nbsp;
+                    </div>
+
+                    <label for="thickness" style="font-family: Papyrus; font-weight: bold;">Brush</label>
+                    <br>
+                    <input type="range" id="thickness" name="thickness" min="1" max="30" value="10" class="slider">
+                    <br>
+                    <label for="transparent" style="font-family: Papyrus; font-weight: bold;">Transparent</label>
+                    <input type="range" id="transparent" min="0" max="100" value="100" class="slider">
+                    <br><br>
+
+                    <div class="colorselector" id="color_sec" style="border-radius:5px 5px 5px 5px;">
+                        &nbsp;&nbsp;
+                        <label for="red" style="background-color: rgb(224, 110, 110);" class="cor">R</label>
+                        <input type="range" id="red" name="red" min="0" max="255" value="0" class="slider">
+                        <br>&nbsp;&nbsp;
+                        <label for="green" style="background-color: rgb(109, 189, 124);" class="cor">G</label>
+                        <input type="range" id="green" name="green" min="0" max="255" value="0" class="slider">
+                        <br>&nbsp;&nbsp;
+                        <label for="blue" style="background-color: rgb(120, 164, 227);" class="cor">B</label>
+                        <input type="range" id="blue" name="blue" min="0" max="255" value="0" class="slider">
+                    </div>
+
+                    <br>
+                    <label style="font-family: Papyrus; font-weight: bold;">Size: </label><select id='fontsize'>
+                        <option value='14px'>14px</option>
+                        <option value='16px'>16px</option>
+                        <option value='18px'>18px</option>
+                        <option value='20px'>20px</option>
+                        <option value='24px'>24px</option>
+                        <option value='26px'>26px</option>
+                    </select>
+                    <br><br>
+                    <label for='fontface' style="font-family: Papyrus; font-weight: bold;">Font: </label><select id='fontface'>
+                        <option value='Arial'>Arial</option>
+                        <option value='Verdana'>Verdana</option>
+                        <option value='cursive'>cursive</option>
+                        <option value='fantasy'>fantasy</option>
+                        <option value='monospace'>monospace</option>
+                    </select>
+                    <br><br>
+                    
+                    <div class="btn_g3">
+                        <input type="file" id="uploader" height ="15px" >
+                        <button id="upload" class="button" style="margin-top: 3px; font-family: Calibri; margin-left: 4px;">upload</button>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <button id="download" class="button" style="margin-top: 3px; font-family: Calibri; margin-left: 4px;">download</button>
+                    </div>
+                
+                <!-- <div class="row">
+                    //
+                </div> -->
+            </section>
+        </div>
+        <script src="hw1.js"></script>
+    </body>
+
+</html>
